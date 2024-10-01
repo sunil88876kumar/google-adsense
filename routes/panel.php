@@ -254,9 +254,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
             // Google Adsense
             Route::prefix('googleadsense')->name('googleadsense.')->group(function () {
                 Route::get('/', [AdminController::class, 'googleAdsenseList'])->name('index');
-                Route::get('/create-or-update/{id?}', [AdminController::class, 'googleAdsenseNewOrEdit'])->name('googleAdsenseNewOrEdit');
+                Route::get('/createOrUpdate/{id?}', [AdminController::class, 'googleAdsenseNewOrEdit'])->name('googleAdsenseNewOrEdit');
                 Route::get('/delete/{id}', [AdminController::class, 'googleAdsenseDelete'])->name('googleAdsenseDelete');
-                Route::post('/save/{id?}', [AdminController::class, 'googleAdsenseSave']);
+                Route::post('/save/{id?}', [AdminController::class, 'googleAdsenseSave'])->name('googleAdsenseSave');
             });
 
             //Frontend

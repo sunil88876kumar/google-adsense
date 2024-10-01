@@ -663,7 +663,7 @@ class AdminController extends Controller
 
     // Google Adsense
     public function googleAdsenseList(){
-        $list = AdsenseAd::orderBy('id','DESC')->limit(10)->get();
+        $list = AdsenseAd::orderBy('id','DESC')->get();
         return view('panel.admin.adsense.index', compact('list'));
     }
 

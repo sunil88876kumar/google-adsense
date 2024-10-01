@@ -21,7 +21,7 @@
 
 <div class="container mt-5">
 <!-- route('dashboard.admin.googleadsense.googleAdsenseSave') -->
-    <form method="post" action="{{ action([App\Http\Controllers\Dashboard\AdminController::class, 'googleAdsenseSave'], ['id' =>  $googleAdsenseAdNeworEdit ? $googleAdsenseAdNeworEdit->id : null]) }}">
+    <form method="post" action="{{ route('dashboard.admin.googleadsense.googleAdsenseSave', ['id' =>  $googleAdsenseAdNeworEdit ? $googleAdsenseAdNeworEdit->id : null]) }}">
         @csrf
         <!-- Text Input -->
         <div class="mb-3">
